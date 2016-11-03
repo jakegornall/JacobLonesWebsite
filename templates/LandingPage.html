@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jacob Lones</title>
+    <meta name="description" content="Jacob Lones Official Website">
+    <meta name="author" content="Jake Gornall">
+
+    <link rel='shortcut icon' href='{{url_for("static", filename="images/favicon.ico")}}' type='image/x-icon'>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/MainPageStyles.css')}}">
+
+    <!-- jQuery -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h6 id="email-signup">SIGN UP FOR EMAIL LIST!</h6>
+            </div>
+            <div id="socialmedia" class="col-md-6 text-right">
+                <h6>SOCIAL MEDIA ICONS GO HERE</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center no-margin no-padding">
+                <h1>JACOB LONES</h1>
+                <button id="menu-icon">MENU</button>
+                <div id="nav-bar" class="row no-margin no-padding" width="100%">
+                    <div class="col-md-2 menu-item">HOME</div>
+                    <div class="col-md-2 menu-item">NEWS</div>
+                    <div class="col-md-2 menu-item">ABOUT</div>
+                    <div class="col-md-2 menu-item">SHOWS</div>
+                    <div class="col-md-2 menu-item">MUSIC</div>
+                    <div class="col-md-2 menu-item">PHOTOS</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 no-margin no-padding">
+                <img src="{{url_for('static', filename='images/LonesBanner.png')}}" width="100%">
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='js/LonesMainPageController.js')}}"></script>
+</body>
+</html>
