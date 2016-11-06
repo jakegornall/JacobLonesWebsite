@@ -6,8 +6,12 @@ $(document).ready(function() {
 		if (isVisable === false){
 			$('#nav-bar').animate({
 				marginLeft: "0px",
-				height: "300px"
+				height: "45px"
 			});
+			setTimeout(function(){
+				$('#nav-bar').css('height', 'auto');
+			}, 400)
+			
 
 			isVisable = true;
 		} else {
@@ -26,7 +30,7 @@ $(window).resize(function() {
 		$('#nav-bar').css('margin-left', '0px');
 		$('.menu-item').css('height', 'auto');
 	} else if (isVisable === true) {
-		$('#nav-bar').css('height', '300px');
+		$('#nav-bar').css('height', 'auto');
 		$('#nav-bar').css('margin-left', '0px');
 	} else {
 		$('#nav-bar').css('height', '0px');
@@ -35,3 +39,14 @@ $(window).resize(function() {
 })
 
 
+// creates smooth window scroll when a tag is clicked.
+var $root = $('html, body');
+$('a').click(function() {
+    var href = $.attr(this, 'href');
+    $root.animate({
+        scrollTop: $(href).offset().top
+    }, 1000, 'swing', function () {
+        window.location.hash = href;
+    });
+    return false;
+});

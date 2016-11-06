@@ -21,6 +21,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
 
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -35,29 +38,74 @@
                 <h6 id="email-signup">SIGN UP FOR EMAIL LIST!</h6>
             </div>
             <div id="socialmedia" class="col-md-6 text-right">
-                <h6>SOCIAL MEDIA ICONS GO HERE</h6>
+                <img src="{{url_for('static', filename='images/FB-f-Logo__blue_50.png')}}">
+                <img src="{{url_for('static', filename='images/Instagram-v051916.png')}}" width="50px">
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 text-center no-margin no-padding">
-                <h1>JACOB LONES</h1>
+                <h1 id="title">JACOB LONES</h1>
                 <button id="menu-icon">MENU</button>
                 <div id="nav-bar" class="row no-margin no-padding" width="100%">
-                    <div class="col-md-2 menu-item">HOME</div>
-                    <div class="col-md-2 menu-item">NEWS</div>
-                    <div class="col-md-2 menu-item">ABOUT</div>
-                    <div class="col-md-2 menu-item">SHOWS</div>
-                    <div class="col-md-2 menu-item">MUSIC</div>
-                    <div class="col-md-2 menu-item">PHOTOS</div>
+                    <a href="#home"><div class="col-md-2 menu-item">HOME</div></a>
+                    <a href="#news"><div class="col-md-2 menu-item">NEWS</div></a>
+                    <a href="#about"><div class="col-md-2 menu-item">ABOUT</div></a>
+                    <a href="#shows"><div class="col-md-2 menu-item">SHOWS</div></a>
+                    <a href="#music"><div class="col-md-2 menu-item">MUSIC</div></a>
+                    <a href="#photos"><div class="col-md-2 menu-item">PHOTOS</div></a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 no-margin no-padding">
-                <img src="{{url_for('static', filename='images/LonesBanner.png')}}" width="100%">
+            <div id="banner-container" class="col-md-12 no-margin no-padding">
+                <img id="banner" src="{{url_for('static', filename='images/LonesBanner.png')}}">
             </div>
         </div>
+        <div id="about" class="row">
+        	<div class="col-md-12 text-center">
+        		<h1>Meet The Band</h2>
+        	</div>
+        	<div class="col-md-12 text-center">
+        		<img class="member-pic" src="{{url_for('static', filename='images/square_lones_bioPic.jpg')}}" width="300px" height="300px">
+        		<h1>Jacob Lones</h1>
+        		<p>lead vocals/guitar</p>
+        	</div>
+        	<div class="col-md-3 text-center">
+        		<img class="member-pic" src="http://placehold.it/300x300">
+        		<h1>Luke Hurst</h1>
+        		<p>lead guitar</p>
+        	</div>
+        	<div class="col-md-3 text-center">
+        		<img class="member-pic" src="http://placehold.it/300x300">
+        		<h1>Wesley Reed</h1>
+        		<p>percussion</p>
+        	</div>
+        	<div class="col-md-3 text-center">
+        		<img class="member-pic" src="http://placehold.it/300x300">
+        		<h1>Bass Player</h1>
+        		<p>bass guitar</p>
+        	</div>
+        	<div class="col-md-3 text-center">
+        		<img class="member-pic" src="http://placehold.it/300x300">
+        		<h1>Rythem Guitar</h1>
+        		<p>rythem guitar</p>
+        	</div>
+        </div>
+        <div id="music" class="row">
+        	<div class="col-md-6 text-right">
+        		<br>
+        		<h1>LISTEN TO OUR LATEST RELEASE!</h1>
+        		<br>
+        		<h2>Fence Row Kids!</h2>
+        	</div>
+        	<div class="col-md-6">
+        		<iframe id="spotify-player" src="https://embed.spotify.com/?uri=spotify:album:3koTZOeLmhdfnWqaGnkR2W" width="80%" height="680" frameborder="0" allowtransparency="true"></iframe>
+        	</div>
+        </div>
     </div>
+    <footer class="text-center">
+        <h1>Site Created By: Jake Gornall</h6>
+    </footer>
     <script src="{{url_for('static', filename='js/LonesMainPageController.js')}}"></script>
 </body>
 </html>

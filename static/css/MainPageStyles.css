@@ -10,7 +10,29 @@ body, .container {
 }
 
 body {
-	background-color: white;
+	background-color: #111011;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #86e8ff;
+}
+
+#email-signup {
+	font-size: 25px;
+}
+
+#socialmedia img {
+	margin: 15px;
+	margin-left: 5px;
+}
+
+#title {
+	color: #86e8ff;
+	font-size: 120px;
+	padding: 20px;
+	padding-top: 0px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	letter-spacing: 40px;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #menu-icon {
@@ -18,18 +40,71 @@ body {
 	display: none;
 	background-color: transparent;
 	border: none;
-	padding: 10px;
+	padding: 25px;
+	color: #86e8ff;
+	font-size: 30px;
 }
 .menu-item {
-	padding: 10px;
+	padding: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	transition: background-color 1s;
+}
+.menu-item:hover {
+	background-color: #4d6f82;
+}
+a {
+	color: inherit;
+}
+a:hover {
+	color: inherit;
 }
 #nav-bar {
 	display: block;
-	background-color: #383838;
-	color: #828282;
-	font-family: sans-serif;
-	font-size: 19px;
+	background-color: #15384b;
+	color: #86e8ff;
+	font-size: 35px;
+}
+
+.member-pic {
+	border: 10px solid white;
+	border-radius: 50%;
+	margin-top: 30px;
+	-webkit-box-shadow: 0px 0px 73px -12px rgba(94,94,94,1);
+    -moz-box-shadow: 0px 0px 73px -12px rgba(94,94,94,1);
+	box-shadow: 0px 0px 73px -12px rgba(94,94,94,1);
+}
+#banner {
+	transition: width 1s;
+	width: 100%;
+	
+}
+#banner-container {
+	overflow: hidden;
+}
+#music {
+	background-color: #15384b;
+	padding: 25px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#music h1 {
+	font-size: 120px;
+	vertical-align: center;
+}
+#music h2 {
+	font-size: 90px;
+}
+
+footer {
+	background-color: #15384b;
+	padding: 25px;
+	margin: 0px;
+	margin-top: 15px;
+	color: black;
 }
 
 @media screen and (max-width: 992px) {
@@ -39,11 +114,28 @@ body {
 	#menu-icon {
 		display: block;
 	}
+	#title {
+		padding: 0px;
+	}
+	.menu-item {
+		display: inline;
+	}
 	#nav-bar {
 		height: 0px;
 	}
 	#email-signup, #socialmedia {
 		text-align: center;
+	}
+	#banner {
+		width: 200%;
+		margin-left: -50%;
+	}
+	#banner-container {
+		height: 300px;
+	}
+	#spotify-player {
+		width: 100%;
+		height: 200px;
 	}
 }
 
