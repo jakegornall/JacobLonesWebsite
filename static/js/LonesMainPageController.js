@@ -10,7 +10,7 @@ $(document).ready(function() {
 			});
 			setTimeout(function(){
 				$('#nav-bar').css('height', 'auto');
-			}, 400)
+			}, 501)
 			
 
 			isVisable = true;

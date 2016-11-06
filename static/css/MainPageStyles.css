@@ -86,7 +86,11 @@ a:hover {
 	overflow: hidden;
 }
 #music {
-	background-color: #15384b;
+	background: url(/static/images/landscape_onstage.JPG) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 	padding: 25px;
 	padding-top: 50px;
 	padding-bottom: 50px;
