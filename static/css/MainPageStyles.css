@@ -78,6 +78,7 @@ a:hover {
     color: #86e8ff;
     font-size: 35px;
     background-color: #15384b;
+    overflow: hidden;
 }
 
 #mobile-menu-bar {
@@ -87,6 +88,11 @@ a:hover {
     width: 100%;
     background-color: #15384b;
     z-index: 9999;
+}
+
+#mobile-menu-icon {
+	width: 40px;
+	padding: 25px;
 }
 
 .member-pic {
@@ -147,13 +153,13 @@ footer {
 @media screen and (max-width: 992px; min-width: 781px) {
     #nav-bar {
         margin-left: -150%;
+        background-color: transparent;
     }
     #fixed-nav-bar {
         display: none;
-        opacity: 0;
     }
     #menu-icon {
-        display: block;
+        display: block; !important
     }
     #title {
         padding: 0px;
@@ -190,6 +196,9 @@ footer {
     }
 }
 @media screen and (max-width: 780px) {
+	#content {
+		padding-top: 60px;
+	}
     #nav-bar {
         display: none;
     }
@@ -198,7 +207,7 @@ footer {
         opacity: 0;
     }
     #menu-icon {
-        display: none;
+
     }
     #mobile-menu-bar {
         display: block;

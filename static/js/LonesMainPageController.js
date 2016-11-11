@@ -17,7 +17,7 @@ $(document).ready(function() {
         } else {
             $('#nav-bar').animate({
                 marginLeft: "-150%",
-                height: "0px"
+                height: "0px",
             });
             isVisable = false;
         }
@@ -37,6 +37,8 @@ $(window).resize(function() {
         $('#nav-bar').css('margin-left', '-150%');
     }
 })
+
+
 var fixedNavBar = $('#fixed-nav-bar');
 // shows top nav bar when scrolled past 400px.
 $(document).scroll(function() {
