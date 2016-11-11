@@ -32,10 +32,20 @@
 </head>
 
 <body>
-    <div id="fixed-nav-bar">
-        
+    <div class="container no-margin no-padding">
+        <div id="fixed-nav-bar" class="row no-margin no-padding text-center" width="100%">
+            <a href="#home"><div class="col-md-2 menu-item">HOME</div></a>
+            <a href="#news"><div class="col-md-2 menu-item">NEWS</div></a>
+            <a href="#about"><div class="col-md-2 menu-item">ABOUT</div></a>
+            <a href="#shows"><div class="col-md-2 menu-item">SHOWS</div></a>
+            <a href="#music"><div class="col-md-2 menu-item">MUSIC</div></a>
+            <a href="#photos"><div class="col-md-2 menu-item">PHOTOS</div></a>
+        </div>
     </div>
-    <div class="container">
+    <div id="mobile-menu-bar">
+    	<img id="mobile-menu-icon" src="{{url_for('static', filename='images/menu.png')}}">
+    </div>
+    <div id="content" class="container">
         <div id="home" class="row">
             <div class="col-md-6">
                 <a id="email-signup" href="https://www.reverbnation.com/page_object/join_mailing_list/artist_5552564"><h6>JOIN OUR MAILING LIST!</h6></a>

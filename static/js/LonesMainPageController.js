@@ -39,16 +39,13 @@ $(window).resize(function() {
 })
 var fixedNavBar = $('#fixed-nav-bar');
 // shows top nav bar when scrolled past 400px.
-
-$(window).scroll(function () { 
-    if ($(window).scrollTop() > 300) {
-        fixedNavBar.animate({
-            top: "0px"
-        });
+$(document).scroll(function() {
+    var y = $(this).scrollTop();
+    var width = $(this).width();
+    if (y > 400 && width > 992) {
+      fixedNavBar.fadeIn();
     } else {
-        fixedNavBar.animate({
-            top: "-60px"
-        });
+      fixedNavBar.fadeOut();
     }
 });
 
