@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
     <title>Jacob Lones</title>
     <meta name="description" content="Jacob Lones Official Website">
@@ -32,18 +32,24 @@
 </head>
 
 <body>
-    <div class="container no-margin no-padding">
-        <div id="fixed-nav-bar" class="row no-margin no-padding text-center" width="100%">
-            <a href="#home"><div class="col-md-2 menu-item">HOME</div></a>
-            <a href="#news"><div class="col-md-2 menu-item">NEWS</div></a>
-            <a href="#about"><div class="col-md-2 menu-item">ABOUT</div></a>
-            <a href="#shows"><div class="col-md-2 menu-item">SHOWS</div></a>
-            <a href="#music"><div class="col-md-2 menu-item">MUSIC</div></a>
-            <a href="#photos"><div class="col-md-2 menu-item">PHOTOS</div></a>
+    <div class="no-margin no-padding">
+        <div id="fixed-nav-bar" class="no-margin no-padding text-center horizontal-nav" width="100%">
+            <a href="#home"><div class="menu-item">HOME</div></a>
+            <a href="#about"><div class="menu-item">ABOUT</div></a>
+            <a href="#music"><div class="menu-item">MUSIC</div></a>
+            <a href="#photos"><div class="menu-item">PHOTOS</div></a>
+            <a href="#shows"><div class="menu-item">SHOWS</div></a>
         </div>
     </div>
     <div id="mobile-menu-bar">
-    	<img id="mobile-menu-icon" src="{{url_for('static', filename='images/menu.png')}}">
+    	<button id="mobile-menu-btn"><img id="mobile-menu-icon" src="{{url_for('static', filename='images/menu.png')}}"></button>
+    </div>
+    <div id="mobile-side-menu" class="text-center">
+        <a href="#home"><div class="menu-item">HOME</div></a>
+        <a href="#about"><div class="menu-item">ABOUT</div></a>
+        <a href="#music"><div class="menu-item">MUSIC</div></a>
+        <a href="#photos"><div class="menu-item">PHOTOS</div></a>
+        <a href="#shows"><div class="menu-item">SHOWS</div></a>  
     </div>
     <div id="content" class="container">
         <div id="home" class="row">
@@ -59,13 +65,12 @@
             <div class="col-md-12 text-center no-margin no-padding">
                 <h1 id="title">JACOB LONES</h1>
                 <button id="menu-icon">MENU</button>
-                <div id="nav-bar" class="row no-margin no-padding" width="100%">
-                    <a href="#home"><div class="col-md-2 menu-item">HOME</div></a>
-                    <a href="#news"><div class="col-md-2 menu-item">NEWS</div></a>
-                    <a href="#about"><div class="col-md-2 menu-item">ABOUT</div></a>
-                    <a href="#shows"><div class="col-md-2 menu-item">SHOWS</div></a>
-                    <a href="#music"><div class="col-md-2 menu-item">MUSIC</div></a>
-                    <a href="#photos"><div class="col-md-2 menu-item">PHOTOS</div></a>
+                <div id="nav-bar" class="row no-margin no-padding horizontal-nav" width="100%">
+                    <a href="#home"><div class="menu-item">HOME</div></a>
+                    <a href="#about"><div class="menu-item">ABOUT</div></a>
+                    <a href="#music"><div class="menu-item">MUSIC</div></a>
+                    <a href="#photos"><div class="menu-item">PHOTOS</div></a>
+                    <a href="#shows"><div class="menu-item">SHOWS</div></a>
                 </div>
             </div>
         </div>
@@ -84,24 +89,24 @@
         		<p>lead vocals/guitar</p>
         	</div>
         	<div class="col-md-3 text-center">
-        		<img class="member-pic" src="http://placehold.it/300x300">
+        		<img class="member-pic" src="{{url_for('static', filename='images/LukeHurst_portrait.jpg')}}">
         		<h1>Luke Hurst</h1>
         		<p>lead guitar</p>
         	</div>
         	<div class="col-md-3 text-center">
-        		<img class="member-pic" src="http://placehold.it/300x300">
+        		<img class="member-pic" src="{{url_for('static', filename='images/wesley_portrait.jpg')}}">
         		<h1>Wesley Reed</h1>
         		<p>percussion</p>
         	</div>
         	<div class="col-md-3 text-center">
         		<img class="member-pic" src="http://placehold.it/300x300">
-        		<h1>Bass Player</h1>
+        		<h1>Ben Maggard</h1>
         		<p>bass guitar</p>
         	</div>
         	<div class="col-md-3 text-center">
-        		<img class="member-pic" src="http://placehold.it/300x300">
-        		<h1>Rythem Guitar</h1>
-        		<p>rythem guitar</p>
+        		<img class="member-pic" src="{{url_for('static', filename='images/Jordan_portrait.jpg')}}">
+        		<h1>Jordan Bennett</h1>
+        		<p>rythm guitar</p>
         	</div>
         </div>
         <div id="music" class="row">
